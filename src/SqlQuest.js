@@ -35,11 +35,7 @@
  * 
  * All values must be pre-validated, we don't do that here
  */
-/**
- * @todo TS Overload on JSDoc applied to ES2020 will not work 100%.
- * Pick your poison, it's either overload JSDoc errors or constructor
- * parameter 'type any' errors.  Need to addess via .d.ts or conversion to TS
- */
+
 /**
  * @typedef {import('pg').Pool} PgPool
  * @typedef {import('pg').PoolClient} PgPoolClient
