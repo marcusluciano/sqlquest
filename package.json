@@ -1,0 +1,30 @@
+{
+  "name": "sqlconnector",
+  "version": "1.0.0",
+  "description": "SQL query/execute/stream/transact",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusluciano/sqlquest.git"
+  },
+  "keywords": [
+    "SQL",
+    "connector"
+  ],
+  "author": "Mark Lucas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcusluciano/sqlquest/issues"
+  },
+  "homepage": "https://github.com/marcusluciano/sqlquest#readme",
+  "dependencies": {
+    "mssql": "^11.0.1",
+    "mysql2": "^3.10.2",
+    "pg": "^8.12.0",
+    "pg-query": "^0.11.0",
+    "sqlite3": "^5.1.7"
+  }
+}
