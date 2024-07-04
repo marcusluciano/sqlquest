@@ -1,7 +1,7 @@
 
 /** SqlQuest configuration file
  * @typedef {object} sqlQuestConfig
- * @property {string} dbType - 'mssql', 'pg', 'mysql'
+ * @property {string} dbType - 'mssql' || 'pg' || 'mysql' || 'sqlite3'
  * @property {import("mssql").config |
  *            import("pg").PoolConfig |
  *            import("mysql2").PoolOptions |

@@ -18,11 +18,19 @@
  * @method #sqlQueryExecute() called by query() and execute()
  * 
  * @method query() - Performs SELECT on an SQL query string, returns one recordset
+ * @example .query('SELECT ItemCode FROM InventoryMaster WHERE ItemCode='12345')
+ * returns [['12345']] or empty array if none found in table
  * @method execute() - Executes an SQL command, returns count of records affected
+ * @example .execute('SELECT ItemCode FROM InventoryMaster WHERE ItemCode='12345')
+ * returns number 0 or 1
  * @method streamQuery() - Performs query() and returns readable stream of data
  * @method transBegin() - Begin a transaction (returns 'transaction object')
- * @method transAct() - Perform part of a transaction (via transaction object)
- * @method transCommit() - Commit a transaction (via transaction object))
+ * Optional parameter is request ID or other tracking string
+ * @method transAct() - Perform part of a transaction
+ * @method transCommit() - Commit a transaction.
+ * Multilevel commits must be done manually using the connection 
+ * that was returned from transBegin.  Call it with 
+ * @example .transAct('BEGIN TRANSACTION')
  * @method transRollback() - Roll back a transaction (via transaction object)
  * 
  * SQL Injection methods
@@ -33,8 +41,6 @@
  * @method sqlBoolean() - Format a boolean for SQL injection as a bit
  * 
  * Any valid SQL strings can be passed to exec, query, streamQuery, and transAct
- * 
- * All values must be pre-validated, we don't do that here
  */
 
 /**
@@ -494,11 +500,11 @@ export default class SqlQuest {
      * @async
      * @method streamQuery - Return stream of objects or characters
      * @param {string} sql - SQL query
-     * @param {boolean} [objectMode] - Return raw SQL objects? (false === return JSON stringified)
      * @param {string} [reqId] - Request ID or tracking code
+     * @param {boolean} [objectMode] - Return raw SQL objects? (false === return JSON stringified)
      * @returns {Promise<Readable|void>}
      */
-    async streamQuery(sql, objectMode, reqId) {
+    async streamQuery(sql, reqId, objectMode) {
 
         try {
             /** @type {Readable|null} */ let stream = null;

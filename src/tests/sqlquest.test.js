@@ -5,9 +5,9 @@ const fs = await import('node:fs');
 
 /**
  * SQL Stream to file
- * @param {string} fid 
- * @param {SqlQuest} quest 
- * @param {string} query 
+ * @param {string} fid - String path to file
+ * @param {SqlQuest} quest - SqlQuest object 
+ * @param {string} query - Prepared SQL SELECT query
  */
 async function streamToFile(fid, quest, query) {
     try {
@@ -185,7 +185,7 @@ outStream.on('finish', () => {
 
 outStream = fs.createWriteStream('./src/tests/users.txt', {encoding: 'utf8'});
 
-let drunks = await sqlQuest.streamQuery("SELECT * FROM users", "12345");
+let drunks = await sqlQuest.streamQuery("SELECT * FROM users","request ID#12345");
 
 if (drunks) {
     drunks
@@ -223,9 +223,9 @@ console.log("Trans 1=", sqlArr[0]);
 console.log("Trans 2=", sqlArr[1]);
 
 if (transHandle){
-    try {
-        await sqlQuest.transAct(transHandle, sqlArr[0]);
-        await sqlQuest.transAct(transHandle, sqlArr[1]);
+    try { // @ts-ignore
+        await sqlQuest.transAct(transHandle, sqlArr[0]); // @ts-ignore
+        await sqlQuest.transAct(transHandle, sqlArr[1]); // @ts-ignore
         await sqlQuest.transCommit(transHandle);
         console.log("2 transactions committed")
     } catch (err) {
