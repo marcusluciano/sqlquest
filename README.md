@@ -9,7 +9,7 @@ for how to structure your JSON
 
 Example:
 
-const sqlQuest = new SqlQuest(pgConfig)
+const sqlQuest = new SqlQuest(pgConfigJsonFile)
 
 let resultArrArr = await sqlQuest.query('SELECT CustomerCode, CustomerName FROM Customer WHERE CustomerName LIKE '%SMITH%'');
 
