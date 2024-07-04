@@ -28,6 +28,7 @@
  * SQL Injection methods
  * @method sqlString() - Format a string for SQL injection
  * @method sqlDouble() - Format a double float for SQL injection as double float
+ * @method sqlFixed() - Format a number into a fixed decimal point string
  * @method sqlInteger() - Format a number for SQL injection as an integer
  * @method sqlBoolean() - Format a boolean for SQL injection as a bit
  * 
