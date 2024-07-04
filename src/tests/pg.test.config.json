@@ -4,7 +4,7 @@
         "host": "localhost",
         "database": "mdx",
         "user": "postgres",
-        "password": "ou812a",
+        "password": "mydarlingclementine",
         "port": 5432,
         "ssl": false,
         "max": 20,

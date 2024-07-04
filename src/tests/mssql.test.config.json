@@ -4,7 +4,7 @@
         "server": "192.168.1.13\\SQL2019", 
         "database": "fmx", 
         "user": "sa", 
-        "password": "ou812a",
+        "password": "chortlemeister",
         "options": {
             "encrypt": false,
             "parseJSON": true
