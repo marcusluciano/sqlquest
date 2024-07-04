@@ -73,12 +73,12 @@ if ( ! await sqlQuest.dbOpen()) {
 console.log(process.env.SQLQUEST_TEST_CONFIG, "pool open");
 
 /** @constant {Array} */
-const users = await sqlQuest.query("SELECT * FROM Users");
+const users = await sqlQuest.query("SELECT * FROM users");
 
 console.log(users.length, "users on file");
 
 var sql = "DROP TABLE drinks;";
-console.log("Dropping table");
+console.log("Dropping table drinks");
 try {
     await sqlQuest.execute(sql);
 } catch (err) {
