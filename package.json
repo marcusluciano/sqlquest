@@ -24,7 +24,17 @@
     "mssql": "^11.0.1",
     "mysql2": "^3.10.2",
     "pg": "^8.12.0",
-    "pg-query": "^0.11.0",
+    "pg-query-stream": "^4.6.0",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/mssql": "^9.1.5",
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^20.14.7",
+    "@types/pg": "^8.11.6",
+    "@types/sqlite3": "^3.1.11",
+    "@types/tap": "^15.0.11",
+    "tap": "^20.0.3",
+    "typescript": "^5.5.3"
   }
 }

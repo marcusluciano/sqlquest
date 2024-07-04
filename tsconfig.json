@@ -1,0 +1,25 @@
+{
+    "ts-node": { "files": true },
+    "compilerOptions" : {
+        "baseUrl": ".",
+        "lib": ["es2020", "DOM"],
+        "esModuleInterop": true,
+        "paths": {
+            "*": ["src/*"],
+        },
+        "target": "es2020",
+        "moduleResolution": "node",
+        "module": "esnext",
+        "allowJs": true,
+        "checkJs": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "strict": true,
+    },
+    "include": ["src/**/*.js*","src/**/*.mjs*","src/**/*.cjs*","../models/**/*.js*","../models/**/*.mjs*","src/**/*.d.ts"],
+    "exclude": ["node_modules"]
+}

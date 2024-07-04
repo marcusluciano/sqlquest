@@ -495,7 +495,7 @@ export default class SqlQuest {
      * @param {string} sql - SQL query
      * @param {boolean} [objectMode] - Return raw SQL objects? (false === return JSON stringified)
      * @param {string} [reqId] - Request ID or tracking code
-     * @returns {Promise<Readable|void|unknown>}
+     * @returns {Promise<Readable|void>}
      */
     async streamQuery(sql, objectMode, reqId) {
 
@@ -552,7 +552,7 @@ export default class SqlQuest {
                 '.streamQuery(' + this.dbType + ') ' + this.dbIdAndServerName
                 + reqId ? ', req-id: ' + reqId : '', true)
             
-            return err
+            return void
         }
     }
 
@@ -571,7 +571,7 @@ export default class SqlQuest {
      *   MssqlTransaction |
      *   MariaConnection |
      *   Sqlite3Database |
-     *   undefined|unknown>}
+     *   undefined>}
      */
     async transBegin(reqId) {
 
@@ -639,7 +639,7 @@ export default class SqlQuest {
                 'transBegin(' + this.dbType + '),'
                  + reqId ? 'req-id: ' + reqId : '', true);
             
-            return err
+            return void
         }
     }
 

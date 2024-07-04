@@ -1,0 +1,15 @@
+{
+    "dbType": "mysql",
+    "config": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "ou812a",
+        "database": "test",
+        "waitForConnections": true,
+        "connectionLimit": 10,
+        "queueLimit": 3
+    },
+    "sslKeyLocation": "/home/marcus/sslkeys/server-key.pem",
+    "sslCertLocation": "/home/marcus/sslkeys/server-cert.pem"    
+}
