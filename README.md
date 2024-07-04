@@ -11,7 +11,7 @@ See ./src/SqlQuest.js for an explanation of the methods.
 
 Example:
 
-  const sqlQuest = new SqlQuest(pgConfigJsonFile)
+  const sqlQuest = new SqlQuest(pgConfigJsonFile);
 
   let resultArrArr = await sqlQuest.query('SELECT CustomerCode, CustomerName FROM Customer WHERE CustomerName LIKE '%SMITH%'');
 

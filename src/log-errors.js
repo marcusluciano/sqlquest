@@ -55,7 +55,7 @@ export function logError(err, moduleId, message, useStdOut, returnError) {
  */
 export function logSqlError(err, moduleId, databaseId, message, returnError) {
     
-    console.log(moduleName(moduleId), err, message, 'in database', databaseId, JSON.stringify(err));
+    console.error(moduleName(moduleId), err, message, 'in database', databaseId, JSON.stringify(err));
     
     if (returnError) {return err};
 };
