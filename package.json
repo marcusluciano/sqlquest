@@ -1,6 +1,6 @@
 {
   "name": "sqlconnector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SQL query/execute/stream/transact",
   "main": "index.js",
   "scripts": {
