@@ -552,7 +552,7 @@ export default class SqlQuest {
                 '.streamQuery(' + this.dbType + ') ' + this.dbIdAndServerName
                 + reqId ? ', req-id: ' + reqId : '', true)
             
-            return void
+            return
         }
     }
 
@@ -639,7 +639,7 @@ export default class SqlQuest {
                 'transBegin(' + this.dbType + '),'
                  + reqId ? 'req-id: ' + reqId : '', true);
             
-            return void
+            return
         }
     }
 
