@@ -16,6 +16,8 @@ Example:
 
   const sqlQuest = new SqlQuest(pgConfigJsonFile);
 
+  await sqlQuest.dbOpen();
+
   /** Simple query example */
   let resultArrArr = await sqlQuest
     .query("SELECT CustomerCode, CustomerName FROM Customer " +
@@ -32,9 +34,7 @@ Example:
 
   sqlQuest.transCommit(transactionConnection);
 
-  await sqlQuest.dbClose();
-
-  /** Streaming query example */ 
+    /** Streaming query example */ 
   let outStream = fs
   .createWriteStream('./src/tests/users.txt', {encoding: 'utf8'});
 
@@ -53,6 +53,7 @@ Example:
       console.log("*** There are no users ***")
   }
 
+  await sqlQuest.dbClose();
   ```
 Streams can return object or character streams.  Default is character.
 
