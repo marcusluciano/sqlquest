@@ -1,3 +1,8 @@
+/**
+ * Test asssumes you have full rights to the database
+ * and a table in it named "users" exists
+ */
+
 import SqlQuest, { DBTYPES } from '../SqlQuest.js';
 import { Readable } from 'stream';
 
@@ -168,7 +173,7 @@ console.log("outStream writableObjectMode:", outStream.writableObjectMode)
 /** Stream query test
  * @type {Readable|void} drinks
  */
-let drinks = await sqlQuest.streamQuery("SELECT * FROM drinks", false, "12345");
+let drinks = await sqlQuest.streamQuery("SELECT * FROM drinks", "12345");
 
 console.log("Piping drinks");
 
@@ -296,7 +301,7 @@ if (drunks) {
 /** Second round of drinks */
 let outStream2 = fs.createWriteStream('./src/tests/drinks round 2.txt', {encoding: 'utf8'});
 
-drinks = await sqlQuest.streamQuery("SELECT * FROM drinks", false, "12345");
+drinks = await sqlQuest.streamQuery("SELECT * FROM drinks", "12345");
 
 let secondRoundDelivered = false;
 

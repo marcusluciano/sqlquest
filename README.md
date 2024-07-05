@@ -11,12 +11,22 @@ See ./src/SqlQuest.js for an explanation of the methods.
 
 Example:
 
+  import SqlQuest from 'sqlconnector';
+
   const sqlQuest = new SqlQuest(pgConfigJsonFile);
 
   let resultArrArr = await sqlQuest.query('SELECT CustomerCode, CustomerName FROM Customer WHERE CustomerName LIKE '%SMITH%'');
 
+  let transactionConnection = await sqlQuest.transBegin();
+
+  transactionConnection.transAct(aBunchOfSQL);
+  transactionConnection.transAct(moreSQL);
+  transactionConnection.transCommit();
+
   await sqlQuest.dbClose();
 
+
+See ./src/tests/sqlquest.test.js for streaming example.
 
 Pull requests are not being taken at this time.
 
