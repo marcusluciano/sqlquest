@@ -254,9 +254,9 @@ let rbStream = fs.createWriteStream('./src/tests/free drinks.txt', {encoding: 'u
 transHandle = await sqlQuest.transBegin("12345");
 
 if (transHandle){
-    try {
-        await sqlQuest.transAct(transHandle, sqlArr[0]);
-        await sqlQuest.transAct(transHandle, sqlArr[1]);
+    try { // @ts-ignore
+        await sqlQuest.transAct(transHandle, sqlArr[0]); // @ts-ignore
+        await sqlQuest.transAct(transHandle, sqlArr[1]); // @ts-ignore
         await sqlQuest.transAct(transHandle, sqlArr[2]);
 
         /** Note that transHandle can't be used to return recordsets, only record counts */

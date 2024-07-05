@@ -850,7 +850,7 @@ export default class SqlQuest {
      * @returns {Promise<boolean|Error>} 
      * 
      * @overload
-     * @param {MssqlTransactionTransaction} transHandle
+     * @param {MssqlTransaction} transHandle
      * @param {string} [reqId] - Request ID or tracking code
      * @returns {Promise<boolean|Error>} 
      * 
