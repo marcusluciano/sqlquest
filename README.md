@@ -11,19 +11,23 @@ See ./src/SqlQuest.js for an explanation of the methods.
 
 Example:
 
+  ```javascript
   import SqlQuest from 'sqlconnector';
 
   const sqlQuest = new SqlQuest(pgConfigJsonFile);
 
-  let resultArrArr = await sqlQuest.query('SELECT CustomerCode, CustomerName FROM Customer WHERE CustomerName LIKE '%SMITH%'');
+  let resultArrArr = await sqlQuest.query("SELECT CustomerCode, CustomerName FROM Customer WHERE CustomerName LIKE '%SMITH%'");
 
   let transactionConnection = await sqlQuest.transBegin();
+
   sqlQuest.transAct(transactionConnection, aBunchOfSQL);
+
   sqlQuest.transAct(transactionConnection, moreSQL);
+
   sqlQuest.transCommit(transactionConnection);
 
   await sqlQuest.dbClose();
-
+  ```
 
 See ./src/tests/sqlquest.test.js for streaming example.  
 Streams can return object or character streams.  Default is character.
