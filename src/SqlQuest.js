@@ -353,7 +353,7 @@ export default class SqlQuest {
      * @param {string} sql - Prepared SQL statement
      * @param {boolean} isQuery - False = EXECUTE, True = SELECT (affects return only)
      * @param {string} [reqId] - Request ID or tracking code
-     * @returns {Promise<Array<*>|number|void|null>}
+     * @returns {Promise<Array<*>|number|null|void>}
      * Returns array of record objects, or a count of records affected 
      */
     async #sqlQueryExecute(sql, isQuery, reqId) { 
@@ -413,8 +413,8 @@ export default class SqlQuest {
                                 if (err) {
                                     reject(err)
                                 };
-                                if (isQuery) { // @ts-ignore
-                                    resolve(rows)
+                                if (isQuery) { // Gah
+                                    resolve(JSON.parse(rows.JSON.stringify))
                                 } else { // EXECUTE
                                     resolve(rows.affectedRows)
                                 };
@@ -438,7 +438,7 @@ export default class SqlQuest {
                             throw err
                         } else {
                             if (isQuery) {
-                                return rows
+                                return rows.entries
                             } else {
                                 return rows.length
                             }
@@ -507,7 +507,7 @@ export default class SqlQuest {
     async streamQuery(sql, reqId, objectMode) {
 
         try {
-            /** @type {Readable|null} */ let stream = null;
+            /** @type {Readable} */ let stream = new Readable;
 
             if (this.dbType === DBTYPES.PG && this.pgClient) { 
                 
