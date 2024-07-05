@@ -12,7 +12,7 @@
  * @export @default sqlSafeString()
  */
 
-import { DBTYPES } from '../sql/SqlQuest.js';
+import { DBTYPES } from './SqlQuest.js';
 
 import { sqlRegEx } from './sql-regex.js';
 
