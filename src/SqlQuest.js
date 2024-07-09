@@ -20,17 +20,23 @@
  * @method query() - Performs SELECT on an SQL query string, returns one recordset
  * @example .query('SELECT ItemCode FROM InventoryMaster WHERE ItemCode='12345')
  * returns [['12345']] or empty array if none found in table
+ * 
  * @method execute() - Executes an SQL command, returns count of records affected
  * @example .execute('SELECT ItemCode FROM InventoryMaster WHERE ItemCode='12345')
  * returns number 0 or 1
+ * 
  * @method streamQuery() - Performs query() and returns readable stream of data
+ * 
  * @method transBegin() - Begin a transaction (returns 'transaction object')
  * Optional parameter is request ID or other tracking string
+ * 
  * @method transAct() - Perform part of a transaction
+ * 
  * @method transCommit() - Commit a transaction.
  * Multilevel commits must be done manually using the connection 
  * that was returned from transBegin.  Call it with 
  * @example .transAct('BEGIN TRANSACTION')
+ * 
  * @method transRollback() - Roll back a transaction (via transaction object)
  * 
  * SQL Injection methods

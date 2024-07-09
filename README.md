@@ -1,13 +1,13 @@
-# SQL &#9923;  &#8644; JSON &#128376; <br> connection pool
+# SQL &#9923;  &#8644; JSON &#128376; connection pool
 
-Simple SQL connection pool for Microsoft SQL Server, PostgreSQL, MariaDB, and Sqlite.
+### Simple SQL connection pool for Microsoft SQL Server, PostgreSQL, MariaDB, and Sqlite.
 
 Documented in JSDoc, coded in ES2020, type checked with TypeScript.
 
 Connection is opened via JSON file, see ./src/@types/sql-quest-config-types.js 
 for how to structure your JSON.
 
-See ./src/SqlQuest.js for an explanation of the methods.
+All queries are output as JSON.  See ./src/SqlQuest.js for an explanation of the methods.
 
 Example:
 
@@ -47,7 +47,7 @@ Example:
     .on('close', () => {
         console.log("All users piped out")
         if (users) { users.destroy() }; // <<<----- FORGETTING THIS 
-        // WILL HOLD THE SQL STREAM OPEN and along with the SQL connection
+        // WILL HOLD THE SQL STREAM OPEN, along with the SQL connection
     });
   } else {
       console.log("*** There are no users ***")
@@ -57,8 +57,6 @@ Example:
   ```
 Streams can return object or character streams.  Default is character.
 
-
-Pull requests are not being taken at this time.
 
 
 
