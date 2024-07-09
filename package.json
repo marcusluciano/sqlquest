@@ -3,8 +3,9 @@
   "version": "1.0.6",
   "description": "SQL query/execute/stream/transact",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' sudo node --experimental-json-modules ./src/index.js",
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' sudo node --experimental-json-modules ./index.js",
     "test": "node --experimental-json-modules --trace-warnings ./src/tests/sqlquest.test.js"
   },
   "repository": {

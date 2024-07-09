@@ -9,6 +9,6 @@
  * @exports SqlQuest * 
  */
 
-import SqlQuest from "./src/SqlQuest";
+import SqlQuest from "./src/SqlQuest.js";
 
 export default SqlQuest;

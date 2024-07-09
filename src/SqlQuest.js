@@ -861,7 +861,7 @@ export default class SqlQuest {
      * @returns {Promise<boolean|Error>} 
      * 
      * @overload 
-     * @param {MariaPoolConnectionPoolConnection} transHandle
+     * @param {MariaPoolConnection} transHandle
      * @param {string} [reqId] - Request ID or tracking code
      * @returns {Promise<boolean|Error>} 
      * 

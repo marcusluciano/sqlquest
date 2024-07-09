@@ -12,14 +12,14 @@
         "module": "esnext",
         "allowJs": true,
         "checkJs": true,
-        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
         "resolveJsonModule": true,
-        "noEmit": true,
         "strict": true,
+        "declaration": true,
+        "noEmit": true,
     },
-    "include": ["src/**/*.js*","src/**/*.mjs*","src/**/*.cjs*","../models/**/*.js*","../models/**/*.mjs*","src/**/*.d.ts"],
+    "include": ["src/**/*.js*","src/**/*.mjs*","src/**/*.cjs*","src/**/*.d.ts"],
     "exclude": ["node_modules"]
 }

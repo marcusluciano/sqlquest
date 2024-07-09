@@ -49,20 +49,33 @@ console.log("Opening", dbType, "pool");
 switch (process.env.SQLQUEST_TEST_CONFIG) { 
 
     case DBTYPES.MSSQL: 
-        var sqlQuest = new SqlQuest(msConfig); break;
+        if (process.env.DBPASSWORD) {
+            msConfig.config.password=process.env.DBPASSWORD
+        };
+        var sqlQuest = new SqlQuest(msConfig); 
         dbType = DBTYPES.MSSQL
+        break;
 
     case DBTYPES.PG: 
-        var sqlQuest = new SqlQuest(pgConfig); break;
+        if (process.env.DBPASSWORD) {
+            pgConfig.config.password=process.env.DBPASSWORD
+        };
+        var sqlQuest = new SqlQuest(pgConfig);
         dbType = DBTYPES.PG
+        break;
 
     case DBTYPES.MARIA: 
-        var sqlQuest = new SqlQuest(myConfig); break;
+        if (process.env.DBPASSWORD) {
+            myConfig.config.password=process.env.DBPASSWORD
+        };
+        var sqlQuest = new SqlQuest(myConfig);
         dbType = DBTYPES.MARIA
+        break;
 
     case DBTYPES.SQLITE: 
-        var sqlQuest = new SqlQuest(myConfig); break;
+        var sqlQuest = new SqlQuest(myConfig);
         dbType = DBTYPES.SQLITE
+        break;
 
     default: 
         var sqlQuest = new SqlQuest(msConfig); break;
