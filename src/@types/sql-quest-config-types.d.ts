@@ -137,3 +137,4 @@ type mariaConfig = {
      */
     userCountTimer?: number;
 };
+//# sourceMappingURL=sql-quest-config-types.d.ts.map

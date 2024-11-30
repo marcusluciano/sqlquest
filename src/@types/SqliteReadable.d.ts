@@ -25,3 +25,4 @@ export type sqliteReadableParams = {
     highWaterMark: number;
 };
 import { Readable } from 'node:stream';
+//# sourceMappingURL=SqliteReadable.d.ts.map

@@ -18,7 +18,9 @@
         "resolveJsonModule": true,
         "strict": true,
         "declaration": true,
-        "noEmit": true,
+        "emitDeclarationOnly": true,
+        "declarationMap": true,
+        "outDir": "dist",
     },
     "include": ["src/**/*.js*","src/**/*.mjs*","src/**/*.cjs*","src/**/*.d.ts"],
     "exclude": ["node_modules"]

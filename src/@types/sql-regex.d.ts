@@ -93,3 +93,4 @@ export namespace dateRegEx {
         export { regEx_16 as regEx };
     }
 }
+//# sourceMappingURL=sql-regex.d.ts.map

@@ -19,3 +19,4 @@ export function logError(err: any, moduleId: string, message: string, useStdOut?
  * @returns {*} Reflect err
  */
 export function logSqlError(err: any, moduleId: string, databaseId: string, message: string, returnError?: boolean): any;
+//# sourceMappingURL=log-errors.d.ts.map

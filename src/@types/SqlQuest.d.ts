@@ -537,7 +537,7 @@ export default class SqlQuest {
      * @param {string} [reqId] - Request ID or tracking code
      * @returns {Promise<boolean|unknown>}
      */
-    transRollback(transHandle: MariaConnection, reqId?: string): Promise<boolean | Error>;
+    transRollback(transHandle: MariaPoolConnection, reqId?: string): Promise<boolean | Error>;
     /**
      * @async
      * @method transRollback
@@ -616,3 +616,4 @@ export type MariaConnection = import("mysql2").PoolConnection;
 export type MariaRowDataPacket = import("mysql2").RowDataPacket;
 export type Sqlite3Database = import("sqlite3").Database;
 import { Readable } from 'node:stream';
+//# sourceMappingURL=SqlQuest.d.ts.map
