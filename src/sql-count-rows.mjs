@@ -13,7 +13,7 @@
  * SQL: SELECT COUNT(*) FROM tableName WHERE keyColumnName = searchKeyValue
  */ 
 
-import SqlQuest from '../sql/SqlQuest.mjs';
+import SqlQuest from './SqlQuest.mjs';
 
 /** Count how many records are on file in a table for a given search key value
  * @async

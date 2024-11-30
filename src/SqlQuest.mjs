@@ -96,7 +96,7 @@ import {
     pgDataTypes, mssqlDataTypes, mariaDataTypes, sqliteDataTypes 
 } from './sql-data-types.mjs';
 
-const { logError, logSqlError } = await import('../lib/log-errors.mjs');
+const { logError, logSqlError } = await import('./lib/log-errors.mjs');
 
 /** Streaming query high water mark 
  * @const {number} HIGH_WATER_MARK */

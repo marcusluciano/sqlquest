@@ -9,13 +9,13 @@
  * @module sqlCreateDatabaseTables - JSON schemas in, database tables out
  */
 
-/** @typedef {import('../schemas/jsonSchema.mjs').jsonSchema} jsonSchema */
+/** @typedef {import('./schemas/jsonSchema.mjs').jsonSchema} jsonSchema */
 
 import sqlCreateTable from './sql-create-table.mjs';
 
 import SqlQuest from './SqlQuest.mjs';
 
-import pLimiter from '../lib/p-limiter.mjs';
+import pLimiter from './lib/p-limiter.mjs';
 
 import fs from 'node:fs';
 

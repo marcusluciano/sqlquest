@@ -20,7 +20,7 @@ import sqlCreateSchemaAndTypes from './sql-create-schema-and-types.mjs';
 
 import SqlQuest from './SqlQuest.mjs';
 
-import pLimiter from '../lib/p-limiter.mjs';
+import pLimiter from './lib/p-limiter.mjs';
 
 /**
  * @async

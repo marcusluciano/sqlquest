@@ -12,7 +12,7 @@
  * @module sqlCreateSchemaAndTypes - Create JSON schema for this table
  */ 
 
-/** @typedef {import('../schemas/jsonSchema.mjs').jsonSchema} jsonSchema */
+/** @typedef {import('./schemas/jsonSchema.mjs').jsonSchema} jsonSchema */
 /**
  * @typedef {import('./sql-info-schema-queries.mjs').sqlTable} sqlTable
  * @typedef {import('./sql-info-schema-queries.mjs').sqlColumn} sqlColumn
@@ -23,7 +23,7 @@
  * in the JSON schema
 */
 /** Part: children relationships */
-import relations from '../schemas/parent-relations.json' assert { type: 'json' };
+import relations from './schemas/parent-relations.json' assert { type: 'json' };
 
 import { sqlColumnsQuery, sqlKeyConstraintQuery } from './sql-info-schema-queries.mjs';
 

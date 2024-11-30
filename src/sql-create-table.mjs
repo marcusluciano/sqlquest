@@ -9,7 +9,7 @@
  * @module sqlCreateDatabaseTables - JSON schemas in, database tables out
  */
 
-/** @typedef {import('../schemas/jsonSchema.mjs').jsonSchema} jsonSchemaDef */
+/** @typedef {import('./schemas/jsonSchema.mjs').jsonSchema} jsonSchemaDef */
 
 import SqlQuest from './SqlQuest.mjs';
 
