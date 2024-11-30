@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node' sudo node --experimental-json-modules ./index.js",
+    "start": "node --experimental-json-modules ./index.js",
+    "generate-schemas": "node ./src/generate-json-table-schemas.mjs",
     "test": "node --experimental-json-modules --trace-warnings ./src/tests/sqlquest.test.js"
   },
   "repository": {

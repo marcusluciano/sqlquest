@@ -1,0 +1,18 @@
+{
+    "dbType": "pg",
+    "config": {
+        "host": "localhost",
+        "database": "mdx",
+        "user": "postgres",
+        "password": "somepassword",
+        "port": 5432,
+        "ssl": false,
+        "max": 20,
+        "idleTimeoutMillis": 1000,
+        "connectionTimeoutMillis": 1000,
+        "maxUses": 7500
+    },
+    "sslKeyLocation": "/home/marcus/sslkeys/server-key.pem",
+    "sslCertLocation": "/home/marcus/sslkeys/server-cert.pem",
+    "sqltableprefix": "dbo."
+}
